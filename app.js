@@ -6,6 +6,7 @@ const  getRandonColor = ()=>{
     // console.log(randomNumber,randomCode);
     document.body.style.backgroundColor = randomCode;
     heading.innerText = randomCode;
+    navigator.clipboard.writeText(randomCode);
 }
 //event call
 btn.addEventListener("click", getRandonColor);
