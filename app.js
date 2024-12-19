@@ -1,15 +1,14 @@
-const colors = [
-    "#FF5733", "#33FF57", "#3357FF", "#F1C40F", "#9B59B6", "#E74C3C", "#1ABC9C", "#2ECC71", "#3498DB", "#E67E22",
-    "#16A085", "#27AE60", "#2980B9", "#8E44AD", "#2C3E50", "#F39C12", "#D35400", "#C0392B", "#BDC3C7", "#7F8C8D",
-    "#34495E", "#E74C3C", "#9B59B6", "#E67E22", "#2ECC71", "#3498DB", "#F1C40F", "#16A085", "#8E44AD", "#1ABC9C",
-    "#FF33CC", "#FF9900", "#33CC33", "#66CCFF", "#9900CC", "#FF6600", "#6600CC", "#66FF33", "#FF0000", "#0000FF",
-    "#FFFF00", "#00FF00", "#00FFFF", "#FF00FF", "#C0C0C0", "#808080", "#800000", "#808000", "#008000", "#800080",
-    "#008080", "#000080", "#FFC300", "#DAF7A6", "#FF5733", "#C70039", "#900C3F", "#581845", "#2E86C1", "#1ABC9C",
-    "#F5B041", "#CA6F1E", "#76448A", "#2874A6", "#A93226", "#2471A3", "#148F77", "#D68910", "#A04000", "#7D3C98",
-    "#186A3B", "#6C3483", "#D4AC0D", "#C0392B", "#1F618D", "#2874A6", "#B03A2E", "#641E16", "#F8C471", "#ABEBC6",
-    "#E59866", "#3498DB", "#76448A", "#E74C3C", "#AF7AC5", "#D4E157", "#8E44AD", "#B3B6B7", "#4A235A", "#7DCEA0",
-    "#B9770E", "#2E86C1", "#28B463", "#F1948A", "#2980B9", "#52BE80", "#AF601A", "#E59866", "#DC7633", "#AAB7B8"
-  ];
-  
-  console.log(colors);
-  
+const btn = document.getElementById("btn");
+const heading = document.getElementById("heading");
+const  getRandonColor = ()=>{
+    const randomNumber = Math.floor(Math.random() * 16777215);
+    const randomCode = "#" + randomNumber.toString(16);
+    // console.log(randomNumber,randomCode);
+    document.body.style.backgroundColor = randomCode;
+    heading.innerText = randomCode;
+}
+//event call
+btn.addEventListener("click", getRandonColor);
+
+//initial call
+getRandonColor()
